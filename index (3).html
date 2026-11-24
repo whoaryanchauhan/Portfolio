@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Chauhan — Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #FFF03B;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 48px;
+      background: rgba(240, 208, 0, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .nav-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.14em;
+      color: #111;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.45);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #111; }
+
+    .nav-cta {
+      background: #111 !important;
+      color: #FFF03B !important;
+      padding: 9px 22px !important;
+      border-radius: 3px;
+    }
+
+    .nav-cta:hover { background: #333 !important; color: #FFF03B !important; opacity: 1 !important; }
+
+    /* SLIDES */
+    .page { padding-top: 62px; }
+
+    .slide {
+      width: 100%;
+      line-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .slide.visible { opacity: 1; transform: translateY(0); }
+
+    .slide + .slide { border-top: 4px solid #FFF03B; }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .slide:hover img { transform: scale(1.008); }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      padding: 80px 48px 48px;
+      border-top: 5px solid #FFF03B;
+    }
+
+    .footer-inner { max-width: 960px; margin: 0 auto; }
+
+    .footer-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFF03B;
+      margin-bottom: 16px;
+    }
+
+    .footer-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 9vw, 110px);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      color: #fff;
+      margin-bottom: 52px;
+    }
+
+    .footer-heading span { color: #FFF03B; }
+
+    .footer-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 64px;
+    }
+
+    .contact-item { display: flex; flex-direction: column; gap: 7px; }
+
+    .clabel {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFF03B;
+    }
+
+    .contact-item a, .contact-item span {
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover { color: #FFF03B; }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .social-links { display: flex; gap: 20px; }
+
+    .social-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover { color: #FFF03B; }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { gap: 14px; }
+      footer { padding: 60px 24px 40px; }
+      .footer-bottom { flex-direction: column; gap: 16px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Aryan Chauhan</div>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:whoaryanchauhan@gmail.com" class="nav-cta">Hire Me</a></li>
+    </ul>
+  </nav>
+
+  <main class="page" id="work">
+    <div class="slide"><img src="1.png" alt="Portfolio Cover" loading="eager" /></div>
+    <div class="slide"><img src="2.png" alt="About Me" loading="lazy" /></div>
+    <div class="slide"><img src="3.png" alt="Vision & Mission" loading="lazy" /></div>
+    <div class="slide"><img src="4.png" alt="Carousel Work" loading="lazy" /></div>
+    <div class="slide"><img src="5.png" alt="Carousel Designs" loading="lazy" /></div>
+    <div class="slide"><img src="6.png" alt="Social Media Posts" loading="lazy" /></div>
+    <div class="slide"><img src="7.png" alt="Digital Marketing Work" loading="lazy" /></div>
+    <div class="slide"><img src="8.png" alt="Litchi Studio Posts" loading="lazy" /></div>
+    <div class="slide"><img src="9.png" alt="Social Media Post Work" loading="lazy" /></div>
+    <div class="slide"><img src="10.png" alt="Instagram Designs" loading="lazy" /></div>
+    <div class="slide"><img src="12.png" alt="More Work" loading="lazy" /></div>
+    <div class="slide"><img src="13.png" alt="Thank You" loading="lazy" /></div>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <p class="footer-label">Let's work together</p>
+      <h2 class="footer-heading">Got a project?<br><span>Let's talk.</span></h2>
+      <div class="footer-contacts">
+        <div class="contact-item">
+          <span class="clabel">Email</span>
+          <a href="mailto:whoaryanchauhan@gmail.com">whoaryanchauhan@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="clabel">Phone</span>
+          <a href="tel:+918882995473">+91 8882995473</a>
+        </div>
+        <div class="contact-item">
+          <span class="clabel">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/aryan-chauhan-5812b4378/" target="_blank" rel="noopener">aryan-chauhan</a>
+        </div>
+        <div class="contact-item">
+          <span class="clabel">Based in</span>
+          <span>Delhi, India</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Aryan Chauhan. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/aryan-chauhan-5812b4378/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/litchi.studio" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    slides.forEach(slide => observer.observe(slide));
+    if (slides[0]) slides[0].classList.add('visible');
+  </script>
+
+</body>
+</html>
